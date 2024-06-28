@@ -1,5 +1,3 @@
-/* src/components/Projects.css */
-
 .project-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -14,6 +12,17 @@
   object-fit: cover; /* Ensure the image covers the card without stretching */
 }
 
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px; /* Add margin between buttons */
+}
+
+.github-button {
+  margin-left: 15px; /* Add margin between the See More and GitHub buttons */
+}
+
 .card-link {
   color: #007bff; /* Link color */
   text-decoration: none; /* Remove default underline */
@@ -21,4 +30,35 @@
 
 .card-link:hover {
   text-decoration: underline; /* Underline link on hover */
+}
+
+/* Expanded Project Modal */
+.expanded-project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expanded-project-content {
+  background-color: #ffffff;
+  padding: 20px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #000000;
 }

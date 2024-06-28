@@ -2,6 +2,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
+import { Icon } from "@iconify/react";
+import homeIcon from "@iconify-icons/ion/home";
+import userIcon from "@iconify-icons/ion/person";
+import bookIcon from "@iconify-icons/ion/bookmark";
+import mailIcon from "@iconify-icons/ion/mail";
 import "./Navbar.css";
 
 const NavigationBar = () => {
@@ -17,35 +22,51 @@ const NavigationBar = () => {
             <Nav.Link
               as={NavLink}
               to="/"
-              className="nav-link-hover"
-              activeClassName="nav-link-active"
               exact
+              title="Home"
+              className="nav-link"
             >
-              Home
+              <Icon
+                icon={homeIcon}
+                className="icon"
+                style={{ fontSize: "36px" }}
+              />
             </Nav.Link>
             <Nav.Link
               as={NavLink}
               to="/about"
-              className="nav-link-hover"
-              activeClassName="nav-link-active"
+              title="About"
+              className="nav-link"
             >
-              About
+              <Icon
+                icon={userIcon}
+                className="icon"
+                style={{ fontSize: "36px" }}
+              />
             </Nav.Link>
             <Nav.Link
               as={NavLink}
               to="/projects"
-              className="nav-link-hover"
-              activeClassName="nav-link-active"
+              title="Projects"
+              className="nav-link"
             >
-              Projects
+              <Icon
+                icon={bookIcon}
+                className="icon"
+                style={{ fontSize: "36px" }}
+              />
             </Nav.Link>
             <Nav.Link
               as={NavLink}
               to="/contact"
-              className="nav-link-hover"
-              activeClassName="nav-link-active"
+              title="Contact"
+              className="nav-link"
             >
-              Contact
+              <Icon
+                icon={mailIcon}
+                className="icon"
+                style={{ fontSize: "36px" }}
+              />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

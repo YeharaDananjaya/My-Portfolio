@@ -1,21 +1,23 @@
 /* src/components/Home.css */
 
-.bg-light {
-  background-color: #f8f9fa; /* Light background color */
+/* Animation for buttons */
+.btn-animated {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.py-5 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+.btn-animated:hover {
+  transform: translateY(-5px); /* Move button up on hover */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
 }
 
+/* Animation for heading */
 .home-heading {
   font-size: 3rem; /* Large font size for heading */
   font-weight: bold;
   color: #343a40; /* Dark text color */
+  transition: transform 0.3s ease;
 }
 
-.lead {
-  font-size: 1.5rem; /* Larger font size for lead paragraph */
-  color: #6c757d; /* Medium gray text color */
+.home-heading:hover {
+  transform: scale(1.05); /* Scale up heading on hover */
 }

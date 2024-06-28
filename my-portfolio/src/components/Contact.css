@@ -16,16 +16,50 @@
   background-color: #0056b3;
 }
 
+.btn-contact {
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 8px 20px; /* Adjusted padding to make it slightly higher */
+  margin-bottom: 30px; /* Optional: Adjust margin if needed */
+}
+
+.btn-contact:hover {
+  background-color: #f0f0f0;
+}
+
 .contact-info {
   font-size: 1.2rem;
   color: #6c757d;
+  margin-bottom: 10px;
 }
 
 .contact-info a {
   color: #007bff;
   text-decoration: none;
+  margin-left: 5px;
 }
 
 .contact-info a:hover {
   text-decoration: underline;
+}
+
+.expanded-contact {
+  position: fixed;
+  bottom: 100px; /* Adjust bottom position as needed */
+  right: 20px; /* Adjust right position as needed */
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.btn-expand-close {
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.btn-expand-close:hover {
+  background-color: #e9ecef;
 }
