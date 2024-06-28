@@ -1,0 +1,21 @@
+/* src/components/Home.css */
+
+.bg-light {
+  background-color: #f8f9fa; /* Light background color */
+}
+
+.py-5 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.home-heading {
+  font-size: 3rem; /* Large font size for heading */
+  font-weight: bold;
+  color: #343a40; /* Dark text color */
+}
+
+.lead {
+  font-size: 1.5rem; /* Larger font size for lead paragraph */
+  color: #6c757d; /* Medium gray text color */
+}

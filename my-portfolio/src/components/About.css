@@ -1,0 +1,23 @@
+/* src/components/About.css */
+
+.my-5 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.about-heading {
+  font-size: 3rem; /* Large font size for heading */
+  font-weight: bold;
+  color: #343a40; /* Dark text color */
+}
+
+.about-text {
+  font-size: 1.5rem; /* Larger font size for text */
+  color: #6c757d; /* Medium gray text color */
+}
+
+.about-image {
+  max-width: 100%; /* Ensure image does not exceed container width */
+  border-radius: 10px; /* Rounded corners for image */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow for image */
+}
