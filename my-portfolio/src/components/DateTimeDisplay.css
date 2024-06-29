@@ -1,0 +1,26 @@
+/* DateTimeDisplay.css */
+.clock-text {
+  font-size: 24px;
+  color: #007bff; /* Clock text color */
+  animation: pulse 1s infinite alternate; /* Example animation */
+}
+
+.calendar-text {
+  font-size: 18px;
+  color: #6c757d; /* Calendar text color */
+  opacity: 0.8; /* Example opacity */
+}
+
+.clock-icon,
+.calendar-icon {
+  vertical-align: middle;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}

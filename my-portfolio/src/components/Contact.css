@@ -1,5 +1,18 @@
 /* src/components/Contact.css */
 
+/* Main body adjustments */
+main {
+  padding-left: 80px; /* Ensure main content is pushed to the right */
+  padding-top: 20px; /* Adjust top padding as needed */
+  box-sizing: border-box; /* Include padding in the element's width and height */
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-left: 0; /* Remove padding for small screens */
+  }
+}
+
 .form-control {
   border-radius: 5px;
   border: 1px solid #ced4da;

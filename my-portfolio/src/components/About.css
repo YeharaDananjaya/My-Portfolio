@@ -1,9 +1,24 @@
 /* src/components/About.css */
 
-/* Padding for main section */
-.my-5 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+/* Ensure the main content is centered */
+.about-main {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: calc(100vh - 120px); /* Full viewport height minus navbar height */
+  padding-top: 0; /* Remove top padding */
+}
+
+.about-container {
+  padding-left: 80px; /* Ensure main content is pushed to the right */
+  padding-top: 20px; /* Adjust top padding as needed */
+  box-sizing: border-box; /* Include padding in the element's width and height */
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding-left: 0; /* Remove padding for small screens */
+  }
 }
 
 /* Center align text and image */

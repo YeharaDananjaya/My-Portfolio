@@ -1,13 +1,27 @@
-/* src/components/Home.css */
+/* Home.css */
 
-/* Animation for buttons */
-.btn-animated {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Main body adjustments */
+main {
+  padding-left: 80px; /* Ensure main content is pushed to the right */
+  padding-top: 20px; /* Adjust top padding as needed */
+  box-sizing: border-box; /* Include padding in the element's width and height */
 }
 
-.btn-animated:hover {
-  transform: translateY(-5px); /* Move button up on hover */
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
+@media (max-width: 768px) {
+  main {
+    padding-left: 0; /* Remove padding for small screens */
+  }
+}
+
+/* Animation for cards */
+.card-animated {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* Ensure cards take full height of their container */
+}
+
+.card-animated:hover {
+  transform: translateY(-10px); /* Move card up on hover */
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
 }
 
 /* Animation for heading */
@@ -20,4 +34,14 @@
 
 .home-heading:hover {
   transform: scale(1.05); /* Scale up heading on hover */
+}
+
+/* Animation for buttons */
+.btn-animated {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-animated:hover {
+  transform: translateY(-5px); /* Move button up on hover */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
 }

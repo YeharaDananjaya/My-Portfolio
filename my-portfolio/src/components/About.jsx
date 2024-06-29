@@ -6,8 +6,8 @@ import "./About.css"; // Import custom CSS for additional styling
 
 const About = () => {
   return (
-    <main className="my-5">
-      <Container fluid className="py-5">
+    <main className="about-main my-5">
+      <Container className="about-container">
         <Row className="justify-content-center align-items-center">
           <Col md={6}>
             <div className="about-content">

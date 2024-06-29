@@ -1,107 +1,85 @@
-/* src/components/Navbar.css */
+/* Navbar.css */
 
-.fixed-width-navbar {
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  height: 120px; /* Increased navbar height */
-  background-color: #343a40; /* Background color */
-  display: flex; /* Use flexbox */
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
-}
-
-.navbar-nav {
+.sidebar {
+  width: 120px; /* Adjusted width */
   display: flex;
-  justify-content: center;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Start from top */
+  padding-top: 20px; /* Adjusted top padding */
+  z-index: 2000;
+  height: 100vh;
+  background-color: #1f1f1f; /* Darker background color */
 }
 
-.nav-link {
-  font-size: 40px; /* Adjusted icon size */
+.sidebar-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 80px; /* Adjusted gap between icons */
-  position: relative; /* For positioning the title */
-  transition: transform 0.3s ease; /* For magnifying effect */
+  padding: 10px; /* Padding for the logo */
+  margin-bottom: 20px; /* Space between logo and links */
 }
 
-.nav-link svg {
-  vertical-align: middle; /* Align icons vertically in the center */
+.nav-links {
+  flex-grow: 1; /* Take remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Start from top */
+}
+
+.nav-link {
+  font-size: 20px; /* Adjusted font size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0; /* Vertical padding */
+  margin: 10px 0; /* Adjusted margin for links */
+  position: relative;
+  color: white;
+  transition: transform 0.3s ease;
+  width: 100%;
+  text-align: center; /* Center text */
 }
 
 .nav-link:hover {
-  transform: scale(1.2); /* Magnify effect on hover */
+  transform: scale(1.1); /* Magnify effect on hover */
+  color: #007bff; /* Hover color change */
+}
+
+.nav-link svg {
+  vertical-align: middle;
+  font-size: 24px;
 }
 
 .nav-link::after {
-  content: attr(title); /* Display the title attribute */
+  content: attr(title); /* Display title attribute as tooltip */
   position: absolute;
-  bottom: -30px; /* Position below the icon */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #ffffff; /* Background color for the title */
-  color: #343a40; /* Text color */
-  padding: 5px 10px;
-  border-radius: 5px;
+  left: calc(100% + 10px); /* Position tooltip to the right of the link */
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  background-color: #666;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 4px;
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  white-space: nowrap; /* Prevent text wrapping */
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .nav-link:hover::after {
-  opacity: 1;
-  visibility: visible;
-}
-
-body {
-  overflow-x: hidden;
-  padding-top: 120px; /* Adjusted padding to match increased navbar height */
-  margin: 0; /* Remove default body margin */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
-}
-
-/* Navbar Brand Styling */
-.navbar-brand {
-  font-size: 32px; /* Adjusted font size */
-  font-weight: bold;
-  color: #ffffff; /* Text color */
-  padding: 0 20px; /* Padding left and right */
-  transition: transform 0.3s ease;
-}
-
-.navbar-brand:hover {
-  transform: scale(1.1);
-}
-
-/* Nav Link Active State */
-.nav-link-active {
-  font-weight: bold; /* Bold font for active link */
+  opacity: 1; /* Show tooltip on hover */
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 992px) {
   .nav-link {
-    font-size: 36px; /* Smaller icon size for medium screens */
-    margin: 0 10px; /* Reduce gap between icons */
-  }
-
-  .nav-link::after {
-    bottom: -20px; /* Adjust position of title */
+    font-size: 18px; /* Smaller icon size for medium screens */
   }
 }
 
 @media (max-width: 768px) {
   .nav-link {
-    font-size: 24px; /* Smaller icon size for small screens */
-    margin: 0 5px; /* Reduce gap between icons */
-  }
-
-  .nav-link::after {
-    bottom: -15px; /* Adjust position of title */
+    font-size: 16px; /* Smaller icon size for small screens */
   }
 }
